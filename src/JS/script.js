@@ -1,8 +1,14 @@
-const myModal = new bootstrap.Modal("#login", {
+const Login = new bootstrap.Modal("#login", {
   backdrop: true,
 });
 
-let boton_login = document.querySelector("#iniciar_sesion");
-boton_login.addEventListener("click", () => {
-  myModal.show();
+const iniciarSesion = () => {
+  let boton_login = document.querySelector("#iniciar_sesion");
+  boton_login.addEventListener("click", () => {
+    Login.show();
+  });
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  iniciarSesion();
 });
